@@ -1,0 +1,315 @@
+/*DEFAULT VALUES*/
+:root {
+  --main: #dd8e58;
+  --accent-light: #afdde5;
+  --accent-bright: #2ec4b6;
+  --accent-dull: #708a81;
+  --background-alt: #e5d1b8;
+  --text-alt: #c2956e;
+  --text: #2b2129;
+  --white: #f9faf4;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: Lora;
+  src: url("Lora-Regular.ttf") format("truetype");
+}
+
+/*SCROLLBAR*/
+html {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  scroll-padding-top: 10%;
+}
+html::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/*GENERAL*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+  color: var(--text);
+  font-family: HK Grotesk, sans-serif;
+  margin: auto /*50px*/;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  border-radius: 25px;
+}
+
+/*NAV BAR*/
+.navbar {
+  font-family: Lora, HK Grotesk, sans-serif;
+  background-color: var(--main);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+  height: 70px;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar::after {
+  content: none;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  width: 97.5%;
+  position: absolute;
+  left: -40px; /*should be same value as .navbar a {padding: __px}*/
+}
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px; /*should be same value as .navbar ul {left: -__px}*/
+  font-size: 20px;
+  height: 100%;
+  color: var(--white);
+}
+.navbar a:hover {
+  color: var(--text-alt);
+  background-color: var(--text);
+}
+
+/*TITLE*/
+/*container*/
+.title {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin: auto;
+  overflow: hidden;
+}
+/*"Introducing" before website title*/
+.title p {
+  margin-bottom: -60px;
+  margin-left: -10px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+/*website's title*/
+.title h1 {
+  margin-bottom: 30px;
+  margin-left: -10px;
+  max-width: 75%;
+  font-size: 110px;
+}
+/*to align title to bottom left*/
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  margin: auto 20px -20px;
+}
+.parallax {
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quarter-circle {
+  height: 1000px;
+  width: 1200px;
+  position: relative;
+  display: block;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: -275px;
+  overflow: hidden;
+}
+
+/*FOR ALL SUBSECTIONS*/
+.section {
+  height: auto;
+  padding: 20px 80px;
+}
+
+.section h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.section p,
+li {
+  font-size: 25px;
+}
+.section h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+/*DESCRIPTION*/
+
+/*IMPORTANCE*/
+.importance {
+  background-color: var(--accent-bright);
+  color: var(--white);
+}
+
+/*BUDGETING S1*/
+.effective-budgeting .rectangle {
+  height: 100%;
+  width: auto;
+  padding: 5px 20px 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.effective-budgeting .step-1 {
+  background-color: var(--text-alt);
+  color: var(--white);
+}
+.effective-budgeting .step-2 {
+  background-color: var(--background-alt);
+  color: var(--text);
+}
+.effective-budgeting .step-3 {
+  background-color: var(--accent-dull);
+  color: var(--white);
+}
+
+/*SAVING S1*/
+.saving-tips .tips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3%;
+  word-wrap: break word;
+  margin-bottom: -20px;
+  margin-top: 30px;
+}
+.saving-tips .tip {
+  width: 48%;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  margin-bottom: 3%;
+}
+.saving-tips .tip:last-of-type {
+  width: max-content;
+}
+.saving-tips .tip h3 {
+  margin-top: 0;
+}
+.saving-tips .tip p {
+}
+.saving-tips .first {
+  background-color: var(--text);
+  color: var(--white);
+  width: 58%;
+}
+.saving-tips .first img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+.saving-tips .second {
+  background-color: var(--accent-light);
+  width: 38%;
+}
+.saving-tips .second img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.saving-tips .third {
+  background-color: var(--accent-dull);
+  color: var(--white);
+}
+.saving-tips a {
+  color: var(--text);
+}
+.saving-tips a::hover {
+  color: var(--text-alt);
+}
+.saving-tips .flexbox {
+  display: flex;
+  gap: 50px;
+  margin-top: -20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.saving-tips .flexbox .img-div {
+  background-image: url("https://images.unsplash.com/photo-1668258593007-aa2bf485ae03?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  min-width: 45%;
+  border-radius: 25px;
+}
+
+/*ARROWS*/
+.arrows {
+  height: auto;
+  width: auto;
+  overflow: auto;
+  padding: 75px 20px 0px;
+  text-align: center;
+}
+/*prev and next buttons*/
+.prev,
+.next,
+.jump-to-top {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  padding: 0 25px 0;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 60px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+/*positions prev button to left*/
+.prev {
+  float: left;
+}
+/*positions next button to right*/
+.next {
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+/*when arrows hovered over*/
+.prev:hover,
+.next:hover,
+.jump-to-top:hover {
+  color: var(--text-alt);
+}
+.jump-to-top {
+  padding: 0;
+  font-weight: normal;
+}
+
+/*FOOTER*/
+footer {
+  /*temporary*/
+  margin-top: 100px;
+  height: 400px;
+  width: 100%;
+  background-color: var(--text);
+}
