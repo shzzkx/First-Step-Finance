@@ -1,0 +1,523 @@
+/*tweak to make this more useful*/
+/*add media for when screen size is that of a phone
+and also for ipad maybe?
+and maybe get rid of above media
+(which has random width)*/
+/*
+@media only screen and (max-width: 553px) {
+  html {
+    overflow: hidden;
+  }
+}
+*/
+/*using downloaded font
+@font-face {
+  font-family: test-font;
+  src: url(file name here);
+}*/
+/*DEFAULT VALUES*/
+:root {
+  --main: #ee964b;
+  --accent-light: #afdde5;
+  --accent-bright: #2ec4b6;
+  --accent-dull: #708a81;
+  --background-alt: #e5d1b8;
+  --text-alt: #c2956e;
+  --text: #2b2129;
+  --white: #f9faf4;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: Lora;
+  src: url("Lora-Regular.ttf") format("truetype");
+}
+
+/*SCROLLBAR*/
+html {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  scroll-padding-top: 10%;
+}
+html::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/*GENERAL*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+  color: var(--text);
+  font-family: HK Grotesk, sans-serif;
+  margin: auto /*50px*/;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  border-radius: 25px;
+}
+/*main :not(.highlight):not(.slide) {
+  margin: auto 25px;
+}*/
+
+/*NAV BAR*/
+.navbar {
+  font-family: Lora, HK Grotesk, sans-serif;
+  background-color: var(--main);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+  height: 70px;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar::after {
+  content: none;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  width: 97.5%;
+  position: absolute;
+  top: 5px;
+  left: -40px; /*should be same value as .navbar a {padding: __px}*/
+}
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px; /*should be same value as .navbar ul {left: -__px}*/
+  font-size: 20px;
+  height: 100%;
+  color: var(--white);
+}
+.navbar a:hover {
+  color: var(--text-alt);
+  background-color: var(--text);
+}
+
+/*TITLE*/
+/*container*/
+.title {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin: auto;
+  color: var(--white);
+}
+/*"Introducing" before website title*/
+.title p {
+  margin-bottom: -60px;
+  margin-left: -10px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+/*website's title*/
+.title h1 {
+  margin-bottom: 30px;
+  margin-left: -10px;
+  max-width: 75%;
+  font-size: 110px;
+}
+/*to align title to bottom left*/
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  margin: auto 20px -20px;
+}
+.parallax {
+  background-image: url("https://cdn.pixabay.com/photo/2024/09/14/08/41/rainbow-9046587_1280.jpg");
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*HOOK/QUOTE*/
+/*container*/
+.hook {
+  height: auto;
+  width: auto;
+  text-align: center;
+  vertical-align: center;
+  margin: 80px 150px 100px;
+}
+/*text of this section*/
+.hook h2 {
+  max-width: 80%;
+  margin: auto;
+  font-size: 50px;
+  color: var(--text-alt);
+}
+.hook p {
+  font-style: itallic;
+  font-size: 20px;
+  color: var(--text);
+}
+
+/*WHY LEARN FINANCE*/
+/*container*/
+.why-finance {
+  height: auto;
+  margin-bottom: -50px;
+}
+/*title of this section*/
+.why-finance h2 {
+  font-size: 45px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+/*intro sentence*/
+.why-finance .intro {
+  margin: 0 50px;
+  padding: 25px 10px 0;
+  margin-bottom: -20px;
+  margin-left: 80px;
+}
+/*all sentences*/
+.why-finance p {
+  font-size: 25px;
+}
+/*highlight behind title*/
+.highlight {
+  position: absolute;
+  z-index: -1;
+  height: 80px;
+  width: 60%;
+  background-color: var(--accent-light);
+  margin: -0.8em;
+  border-radius: 25px;
+}
+/*container for reasons*/
+.reasons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8%;
+  margin: 0 50px;
+  padding: 20px 10px;
+  word-wrap: break word;
+}
+/*title of each reason*/
+.reasons h3 {
+  font-size: 35px;
+  color: var(--accent-bright);
+  margin-bottom: -0.5em;
+}
+.reasons img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  margin-top: 2em;
+}
+.reason1,
+.reason2,
+.reason3 {
+  max-width: 27%;
+}
+
+/*TOPICS*/
+/*header before topics' slideshow*/
+.topics {
+  margin-top: 100px;
+  height: 570px;
+  width: 100%;
+  background-color: var(--accent-bright);
+  text-align: center;
+}
+.slideshow-title {
+  font-size: 25px;
+  padding-top: 30px;
+  margin: 30px;
+}
+/*topics' slideshow container*/
+.topics-slideshow {
+  max-width: 100%;
+  height: 400px;
+  position: relative;
+  margin: auto auto 30px;
+}
+/*each topic's slide*/
+.slide {
+  display: none;
+  visibility: visible;
+  position: relative;
+}
+.slide img {
+  width: 90%;
+  margin: auto;
+  height: 400px;
+  object-fit: cover;
+}
+.circle {
+  height: 375px;
+  width: 400px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: inline;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 12.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*slide title*/
+.topic-title {
+  color: var(--text);
+  font-size: 35px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+}
+/*slide description*/
+.topic-p {
+  color: var(--text);
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 165px;
+  width: 100%;
+  text-align: center;
+}
+/*slide button*/
+.topic-button {
+  font-size: 25px;
+  padding: auto;
+  position: absolute;
+  top: 245px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  background-color: var(--text);
+  border: none;
+  border-radius: 25px;
+}
+/*slide button*/
+.topic-button:hover {
+  background-color: var(--text-alt);
+}
+.topic-button a:link,
+.topic-button a:visited {
+  text-decoration: none;
+  color: var(--white);
+}
+/*prev and next buttons*/
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 44%;
+  width: auto;
+  margin: auto;
+  padding: 0 35px 0;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 45px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+/*positions prev button to left*/
+.prev {
+  left: 0;
+}
+/*positions next button to right*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/*when arrows hovered over*/
+.prev:hover,
+.next:hover {
+  color: var(--white);
+}
+/*dots for which slide the user is on*/
+.dots {
+  text-align: center;
+  margin: 10px auto;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/*change color of dot that the user is on*/
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+/*for fading animation*/
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*AI LINK*/
+.game-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: auto;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px; /*switch to just one padding: XX; thing*/
+}
+.game-link h2 {
+  font-size: 50px;
+  color: var(--text-alt);
+}
+.game-link button {
+  border: none;
+  background-color: var(--text-alt);
+  color: var(--white);
+  width: auto;
+  height: 50px;
+  font-size: 30px;
+  font-family: HK Grotesk;
+  padding: 0 20px;
+  border-radius: 25px;
+}
+.game-link button:hover {
+  background-color: var(--text);
+}
+
+/*DID YOU KNOW*/
+.did-you-know {
+  height: auto;
+  width: 100%;
+  background-color: var(--accent-light);
+  padding: 50px 60px 40px;
+  display: flex;
+  gap: 50px;
+}
+.dyk-image-div {
+  background-image: url("https://cdn.pixabay.com/photo/2017/09/14/08/28/heart-2748340_1280.jpg");
+  background-position: 75% 50%;
+  background-size: cover;
+  min-width: 40%;
+  border-radius: 25px;
+}
+.dyk-writing {
+  position: relative;
+  top: -10px;
+}
+.did-you-know h2 {
+  font-size: 45px;
+  text-align: left;
+}
+.did-you-know p {
+  font-size: 25px;
+  text-align: left;
+}
+.did-you-know::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*GET INVOLVED*/
+.get-involved {
+  height: auto;
+  margin: 75px auto 50px;
+}
+.get-involved h2 {
+  font-size: 45px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+.get-involved .intro {
+  margin: 20px 50px -20px 80px;
+  font-size: 25px;
+}
+.get-involved p {
+  font-size: 20px;
+}
+.get-involved .ways {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8%;
+  margin: 0 50px;
+  padding: 20px 10px;
+  word-wrap: break word;
+}
+.get-involved .way {
+  max-width: 44.8%; /*or 18.4% for 4 in one row*/
+  margin-bottom: 15px;
+}
+.get-involved .way h3 {
+  font-size: 30px;
+  color: var(--accent-bright);
+  margin-bottom: -0.5em;
+}
+.get-involved img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.get-involved button {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  float: right;
+  font-family: HK Grotesk, sans-serif;
+  margin-top: 5px;
+  color: var(--bright-blue);
+}
+.get-involved button:hover {
+  color: var(--text-alt);
+}
+.get-involved .ways::after {
+  content: "";
+}
+
+/*FOOTER*/
+footer {
+  height: 400px;
+  width: 100%;
+  background-color: var(--text);
+}
