@@ -26,18 +26,6 @@ and maybe get rid of above media
   --text: #2b2129;
   --white: #f9faf4;
 }
-
-/*FONTS*/
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: Lora;
-  src: url("Lora-Regular.ttf") format("truetype");
-}
-
 /*SCROLLBAR*/
 html {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
