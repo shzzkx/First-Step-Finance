@@ -55,8 +55,11 @@ html::-webkit-scrollbar {
 body {
   background-color: var(--white);
   color: var(--text);
-  font-family: Fira Sans, Hanken Grotesk, sans-serif;
+  font-family: Work Sans, Hanken Grotesk, sans-serif;
   margin: auto /*50px*/;
+}
+.fira {
+  font-family: Fira Sans;
 }
 html {
   scroll-behavior: smooth;
