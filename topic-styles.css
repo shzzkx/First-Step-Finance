@@ -41,7 +41,7 @@ html::-webkit-scrollbar {
 body {
   background-color: var(--white);
   color: var(--black);
-  font-family: HK Grotesk, sans-serif;
+  font-family: Hanken Grotesk, sans-serif;
   margin: auto /*50px*/;
 }
 html {
@@ -51,7 +51,7 @@ html {
 
 /*NAV BAR*/
 .navbar {
-  font-family: Lora, HK Grotesk, sans-serif;
+  font-family: Lora, Hanken Grotesk, sans-serif;
   background-color: var(--orange);
   position: sticky;
   top: 0;
