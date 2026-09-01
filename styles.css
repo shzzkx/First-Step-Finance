@@ -70,7 +70,7 @@ img {
 
 /*NAV BAR*/
 .navbar {
-  font-family: Lora, Hanken Grotesk, sans-serif;
+  font-family: Fira Sans, Hanken Grotesk, sans-serif;
   background-color: var(--main);
   position: sticky;
   top: 0;
