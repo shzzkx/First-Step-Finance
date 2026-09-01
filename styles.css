@@ -406,7 +406,7 @@ img {
   width: auto;
   height: 50px;
   font-size: 30px;
-  font-family: HK Grotesk;
+  font-family: Work Sans;
   padding: 0 20px;
   border-radius: 25px;
 }
@@ -495,7 +495,7 @@ img {
   background: transparent;
   border: none;
   float: right;
-  font-family: HK Grotesk, sans-serif;
+  font-family: Work Sans, sans-serif;
   margin-top: 5px;
   color: var(--bright-blue);
 }
