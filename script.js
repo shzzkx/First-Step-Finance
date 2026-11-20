@@ -1,66 +1,34 @@
-//CHANGING QUOTES
-//arrays
-const quotes = [];
-quotes[0] =
-  '"Empty pockets never held anyone back. Only empty heads and empty hearts can do that."';
-quotes[1] = '"An investment in knowledge pays the best interest."';
-quotes[2] = '"The mind is not a vessel to be filled but a fire to be kindled."';
-quotes[3] = '"Money grows on the tree of persistence."';
-quotes[4] =
-  '"If we command our wealth, we shall be rich and free. If our wealth commands us, we are poor indeed."';
-quotes[5] = '"Money is a terrible master but an excellent servant."';
-quotes[6] =
-  '"You can be young without money, but you can\'t be old without it."';
-quotes[7] = '"Fortune befriends the bold."';
-quotes[8] = '"We generate fears while we sit. We overcome them by action."';
-const credits = [];
-credits[0] = "Norman Vincent Peale";
-credits[1] = "Benjamin Franklin";
-credits[2] = "Plutarch";
-credits[3] = "Japanese proverb";
-credits[4] = "Edmund Burke";
-credits[5] = "P. T. Barnum";
-credits[6] = "Tennessee Williams";
-credits[7] = "Emily Dickinson";
-credits[8] = "Dr. Henry Link";
-//get random index
-var random = Math.floor(Math.random() * quotes.length);
-document.getElementById("quote").innerHTML = quotes[random];
-document.getElementById("credit").innerHTML = credits[random];
+// First Step Finance — homepage script (replaces script.js on index.html)
+// The staircase topic selector needs no JavaScript; this only drives the quote.
 
-//TOPICS SLIDESHOW
-let slideIndex = 1;
-showSlide(slideIndex);
+const QUOTES = [
+  ["Empty pockets never held anyone back. Only empty heads and empty hearts can do that.", "Norman Vincent Peale"],
+  ["An investment in knowledge pays the best interest.", "Benjamin Franklin"],
+  ["The mind is not a vessel to be filled but a fire to be kindled.", "Plutarch"],
+  ["Money grows on the tree of persistence.", "Japanese proverb"],
+  ["If we command our wealth, we shall be rich and free. If our wealth commands us, we are poor indeed.", "Edmund Burke"],
+  ["Money is a terrible master but an excellent servant.", "P. T. Barnum"],
+  ["You can be young without money, but you can’t be old without it.", "Tennessee Williams"],
+  ["Fortune befriends the bold.", "Emily Dickinson"],
+  ["We generate fears while we sit. We overcome them by action.", "Dr. Henry Link"],
+];
 
-//for changing the slide
-function changeSlide(n) {
-  showSlide((slideIndex += n));
+const quoteEl = document.getElementById("quote-text");
+const creditEl = document.getElementById("quote-credit");
+const nextBtn = document.getElementById("quote-next");
+let current = -1;
+
+function showQuote() {
+  let next;
+  do {
+    next = Math.floor(Math.random() * QUOTES.length);
+  } while (next === current && QUOTES.length > 1);
+  current = next;
+  quoteEl.textContent = "“" + QUOTES[next][0] + "”";
+  creditEl.textContent = QUOTES[next][1];
 }
 
-//for showing the slide
-function currentSlide(n) {
-  showSlide((slideIndex = n));
+if (quoteEl && creditEl) {
+  showQuote();
+  if (nextBtn) nextBtn.addEventListener("click", showQuote);
 }
-
-function showSlide(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-//shows slide initially
-showSlide(slideIndex);

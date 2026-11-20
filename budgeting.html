@@ -1,52 +1,68 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Budgeting page" />
-    <title>H2025 Submission: Budgeting</title>
-    <link rel="stylesheet" href="topic-styles.css" />
-    <!--Google Fonts (Hanken Grotesk, Fira Sans, Work Sans)-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans">
-  </head>
-  <body>
-    <div class="navbar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Budgeting explained in plain English: what a budget is, why it matters and how to make one." />
+  <title>Budgeting: First Step Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="topic-styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        First Step Finance
+      </a>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#description">Description</a></li>
-        <li><a href="#importance">Importance</a></li>
-        <li><a href="#effective-budgeting">Effective Budgeting</a></li>
+        <li><a href="index.html#path">All topics</a></li>
       </ul>
     </div>
-    <header>
-      <div id="title" class="title">
-        <div class="parallax" style="background-image: url('https://cdn.pixabay.com/photo/2017/09/26/16/08/savings-2789112_1280.jpg');"></div>
-        <span class="quarter-circle" style="left: -400px;"></span>
-        <div class="bottom-left">
-          <h1 class="fira">Budgeting</h1>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div id="description" class="section description">
-        <h2 class="fira">Overview</h2>
-        <p>
-          "Budgeting" is the process of creating a plan for how much money
-          you'll spend. This spending plan, called a "budget", allocates a
+  </nav>
+
+  <header class="topic-head" id="top">
+    <div class="wrap">
+      <a class="crumb" href="index.html#path">&larr; All topics</a>
+      <h1>Budgeting</h1>
+      <p class="oneline">A plan for where your money goes, made before you spend it.</p>
+      <ol class="progress" aria-hidden="true">
+        <li class="here" style="--i:0"></li><li style="--i:1"></li><li style="--i:2"></li><li style="--i:3"></li>
+        <li style="--i:4"></li><li style="--i:5"></li><li style="--i:6"></li><li style="--i:7"></li>
+      </ol>
+      <p class="progress-label">Step 1 of 8</p>
+    </div>
+  </header>
+
+  <main class="wrap topic-body">
+    <aside class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#importance">Why it matters</a></li>
+        <li><a href="#how">How to budget</a></li>
+      </ul>
+    </aside>
+
+    <article class="article">
+      <section id="overview">
+        <h2>Overview</h2>
+        <p class="lede">
+          “Budgeting” is the process of creating a plan for how much money
+          you’ll spend. This spending plan, called a “budget”, allocates a
           certain amount of your money for personal use. When budgeting, you
           should consider both your revenue and expenses to create a budget that
-          doesn't bring you into debt.
+          doesn’t bring you into debt.
         </p>
-      </div>
+      </section>
 
-
-      <div id="importance" class="section importance">
-        <h2 class="fira">Importance</h2>
-        <p>Why should you have a budget?</p>
+      <section id="importance">
+        <h2>Why should you have a budget?</h2>
         <p>
           For starters, a budget can help you spend within your limit. If you
           know how much money you make and spend in any given time period, you
@@ -56,10 +72,10 @@
         </p>
         <p>
           In addition, making a budget can reveal your spending habits. As you
-          create your budget, you'll come face to face with how you spend your
-          money, and if you're spending it on what truly matters (or not.) For
+          create your budget, you’ll come face to face with how you spend your
+          money, and if you’re spending it on what truly matters (or not.) For
           example, you may find that you always pay your credit card bills in
-          time and don't owe any late fees. Or you might find that your
+          time and don’t owe any late fees. Or you might find that your
           subscriptions are costing you more than you thought they did. In any
           case, budgeting allows you to see how healthy your spending habits
           are, and may be the first step in changing any habits that are
@@ -69,93 +85,105 @@
           On that note, a budget is essential in maintaining your financial
           wellness in the long run. The process of budgeting itself forces you
           to think about both the money you make and how you spend that money,
-          allowing you to determine what changes you'll need to make to improve
+          allowing you to determine what changes you’ll need to make to improve
           your financial situation. When you finish, you can look over your
-          budget and figure out how long it'll take you to achieve your
+          budget and figure out how long it’ll take you to achieve your
           financial goals - to get that car you really want, buy your first
-          home, or maybe go on that vacation you thought you'd never be able to
+          home, or maybe go on that vacation you thought you’d never be able to
           afford. Your budget can cast light on what you truly want from life
-          and how much money you'll need to get to the places you want to go.
+          and how much money you’ll need to get to the places you want to go.
         </p>
-      </div>
-      <div id="effective-budgeting" class="section effective-budgeting">
-        <h2 class="fira">How To Budget Effectively</h2>
+      </section>
+
+      <section id="how">
+        <h2>How to budget effectively</h2>
         <p>
-          Want to create a realistic spending plan, but aren't sure where to
+          Want to create a realistic spending plan, but aren’t sure where to
           start? Here are some pointers that will help you budget effectively
           and painlessly.
         </p>
-        <div class="step-1 rectangle">
-          <h3 class="fira">Step #1: Identify your revenues and expenses</h3>
-          <p>
-            This is how you begin creating your budget. First, decide on a time
-            period for your budget. This could be anywhere from a month to a
-            year, though we recommend 2-3 months, especially for beginners.
-            Next, identify all sources of revenue - that is, the money you make.
-            This includes your salary and any interest you earn. Add these
-            accounts together to figure out how much money you put on the table
-            in the time period you chose. Now you can move on to your expenses.
-            This means any money you spend in your chosen time period, not
-            including any one-time emergencies (such as car repairs.) Add these
-            accounts together as well. Look over your revenue and expense totals
-            and ask yourself: Am I spending more money than I'm making? How can
-            I increase my revenue, or lower my expenses? Do I have enough money
-            for emergencies? Keep these questions in mind as you continue with
-            your budgeting process.
-          </p>
-        </div>
-        <div class="step-2 rectangle">
-          <h3 class="fira">Step #2: Separate your needs and wants</h3>
-          <p>
-            Your expense accounts can be further divided into two main
-            categories - your needs and your wants. Your needs include things
-            like rent, groceries, transportation, and medicine - anything you
-            can't live without. Your wants, on the other hand, are things you'd
-            like to have but don't need to survive, such as eating out,
-            streaming services, or the latest tech. Separating your expenses
-            into your needs and wants can help you figure out if you're wasting,
-            rather than spending, your money on luxuries you don't need. Ask
-            yourself: could you go without a music subscription or expensive new
-            clothing for a while? Spending money on your wants is important, of
-            course - it can relieve stress, boost creativity, and is a form of
-            self-care - but overspending on these luxuries is dangerous, and you
-            may find it in your best interest to save or invest that money
-            instead. Try finding ways to have fun without spending as much money
-            - for example, a movie night at your friend's house instead of going
-            to the theatres.
-          </p>
-        </div>
-        <div class="step-3 rectangle">
-          <h3 class="fira">Step #3: Set financial goals for yourself.</h3>
-          <p>
-            Now that you know how much money you make, how much money you spend,
-            and what you spend your money on, you can start creating financial
-            goals for your future self. Financial goals can be as simple as
-            saving for retirement or as ambitious as starting a new business. If
-            you love travelling, maybe you'll want to save enough money to fly
-            overseas; if you have a family, then you'll need to start funding
-            for your child's education. No matter what financial goals you have
-            in mind, you must ensure that your goals are realistic. Unrealistic
-            goals only set you up for disappointment, and can cause you to feel
-            financially demotivated. Make sure the goals you set are something
-            you can actually achieve by planning every step along the way.
-          </p>
-        </div>
-      </div>
-      <div class="arrows">
-        <!--onclick="article(id of prev/next article)""-->
-        <!--js function article(id) that opens article with that id on the same tab-->
-        <a class="prev fira">&#10094; Credit</a>
-        <a href="#title" class="jump-to-top">&#11105;</a>
-        <a href="saving.html" class="next fira"">Saving &#10095;</a>
-      </div>
-    </main>
-    <footer></footer>
-    <script src="script.js"></script>
-  </body>
+        <ol class="how">
+          <li>
+            <span class="how-num" aria-hidden="true">1</span>
+            <div>
+              <h3>Identify your revenues and expenses</h3>
+              <p>
+                This is how you begin creating your budget. First, decide on a time
+                period for your budget. This could be anywhere from a month to a
+                year, though we recommend 2-3 months, especially for beginners.
+                Next, identify all sources of revenue - that is, the money you make.
+                This includes your salary and any interest you earn. Add these
+                accounts together to figure out how much money you put on the table
+                in the time period you chose. Now you can move on to your expenses.
+                This means any money you spend in your chosen time period, not
+                including any one-time emergencies (such as car repairs.) Add these
+                accounts together as well. Look over your revenue and expense totals
+                and ask yourself: Am I spending more money than I’m making? How can
+                I increase my revenue, or lower my expenses? Do I have enough money
+                for emergencies? Keep these questions in mind as you continue with
+                your budgeting process.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="how-num" aria-hidden="true">2</span>
+            <div>
+              <h3>Separate your needs and wants</h3>
+              <p>
+                Your expense accounts can be further divided into two main
+                categories - your needs and your wants. Your needs include things
+                like rent, groceries, transportation, and medicine - anything you
+                can’t live without. Your wants, on the other hand, are things you’d
+                like to have but don’t need to survive, such as eating out,
+                streaming services, or the latest tech. Separating your expenses
+                into your needs and wants can help you figure out if you’re wasting,
+                rather than spending, your money on luxuries you don’t need. Ask
+                yourself: could you go without a music subscription or expensive new
+                clothing for a while? Spending money on your wants is important, of
+                course - it can relieve stress, boost creativity, and is a form of
+                self-care - but overspending on these luxuries is dangerous, and you
+                may find it in your best interest to save or invest that money
+                instead. Try finding ways to have fun without spending as much money
+                - for example, a movie night at your friend’s house instead of going
+                to the theatres.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="how-num" aria-hidden="true">3</span>
+            <div>
+              <h3>Set financial goals for yourself</h3>
+              <p>
+                Now that you know how much money you make, how much money you spend,
+                and what you spend your money on, you can start creating financial
+                goals for your future self. Financial goals can be as simple as
+                saving for retirement or as ambitious as starting a new business. If
+                you love travelling, maybe you’ll want to save enough money to fly
+                overseas; if you have a family, then you’ll need to start funding
+                for your child’s education. No matter what financial goals you have
+                in mind, you must ensure that your goals are realistic. Unrealistic
+                goals only set you up for disappointment, and can cause you to feel
+                financially demotivated. Make sure the goals you set are something
+                you can actually achieve by planning every step along the way.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <nav class="pager" aria-label="Next topic">
+        <a class="next" href="saving.html"><small>Next topic</small><strong>Saving &rarr;</strong></a>
+      </nav>
+      <p class="back-all"><a href="index.html#path">Back to all topics</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>First Step Finance</strong>: finance for complete beginners.</p>
+      <p>Built for Hackonomics 2025.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
-
-
-
-
-
